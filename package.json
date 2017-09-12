@@ -1,0 +1,38 @@
+{
+  "name": "base-koa",
+  "version": "0.1.0",
+  "author": {
+    "name": "LeoHughes",
+    "email": "zhihy123@qq.com"
+  },
+  "engines": {
+    "node": ">= 7.8.0"
+  },
+  "scripts": {
+    "start": "node bin/www",
+    "dev": "./node_modules/.bin/nodemon bin/www",
+    "prd": "pm2 start bin/www",
+    "test": ""
+  },
+  "dependencies": {
+    "captchapng": "0.0.1",
+    "debug": "^3.0.1",
+    "jwt-simple": "^0.5.1",
+    "koa": "^2.2.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-convert": "^1.2.0",
+    "koa-json": "^2.0.2",
+    "koa-logger": "^3.0.1",
+    "koa-onerror": "^3.1.0",
+    "koa-redis": "^3.1.1",
+    "koa-router": "^7.1.1",
+    "koa-session": "^5.5.0",
+    "koa-static": "^4.0.1",
+    "koa-views": "^6.0.2",
+    "pug": "^2.0.0-rc.1",
+    "redis": "^2.8.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.8.1"
+  }
+}
