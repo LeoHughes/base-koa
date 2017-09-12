@@ -1,7 +1,5 @@
-let http = require('http')
-let querystring = require('querystring')
-
-
+const http = require('http')
+const querystring = require('querystring')
 
 module.exports = (httpOption, param) => {
 
@@ -20,10 +18,8 @@ module.exports = (httpOption, param) => {
     //设置http请求内容长度    
     httpOption.headers["Content-Length"] = querystring.stringify(param).length
 
-
     let reqTimer = null
     let req = null
-
 
     // 请求超时则中断
     reqTimer = setTimeout(() => {
@@ -34,8 +30,6 @@ module.exports = (httpOption, param) => {
 
     }, httpOption.timeOut || 3000)
 
-
-
     //创建http request 请求    
     req = http.request(httpOption, (res) => {
 
@@ -44,7 +38,7 @@ module.exports = (httpOption, param) => {
 
       let statusCode = res.statusCode.toString()
 
-      console.log('---start---')
+      console.log('---start---');
       console.log(`statusCode is ${statusCode}`)
 
       res.on('data', (chunk) => {
@@ -86,7 +80,7 @@ module.exports = (httpOption, param) => {
 
       })
 
-    })
+    });
 
     req.on('error', (e) => {
       console.log(e.message)
