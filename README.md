@@ -3,7 +3,7 @@
 
 |--bin              Koa服务器启动文件
 |-controller        逻辑处理层文件
-|--mod              底层http请求ProxyModel的封装
+|--proxy              底层http请求ProxyModel的封装
 |--public           脚本、样式及图片资源
 |--routes           路由配置及中间件
   |--api            接口路由及配置文件
