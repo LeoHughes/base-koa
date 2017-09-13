@@ -6,6 +6,6 @@ block content
   img(src="/api/codeImg")
   script(src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js")
   script.
-    $.get('/api/getUserName').done(function(res){
+    $.post('/api/login',{'userName':'hughes','passWord':123}).done(function(res){
       console.log(res)
     })

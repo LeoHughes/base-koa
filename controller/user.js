@@ -11,6 +11,16 @@ class user extends util {
     super()
   }
 
+  login() {
+
+    return ctx => {
+
+      ctx.body = ctx.request.body
+
+    }
+
+  }
+
 }
 
 module.exports = user
