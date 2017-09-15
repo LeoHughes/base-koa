@@ -12,6 +12,7 @@
   |--index          总路由输出文件
 |--views            页面
 |--util             基础类或工具包
+|--validateSchema   接口数据验证数据模型
 |--logs             日志文件夹
 |--app.js           Koa配置文件
 |--config.js        项目基础配置文件
