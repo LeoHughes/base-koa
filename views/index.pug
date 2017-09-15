@@ -3,9 +3,9 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
-  img(src="/api/codeImg")
+  img(src="/codeImg")
   script(src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js")
   script.
-    $.post('/api/login',{'userName':'hughes','passWord':123}).done(function(res){
+    $.post('/api/login',{'userName':'hughes','passWord':123456,'email':'zhihy123@qq','name':'好'}).done(function(res){
       console.log(res)
     })

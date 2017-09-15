@@ -4,7 +4,9 @@ const controller = require('../controller/index')
 
 
 router
-//首页
+//验证码图片地址
+  .get('/codeImg', controller.page.codeImg())
+  //首页
   .get('/', controller.page.index())
   //登录页
   .get('/login', controller.page.login())

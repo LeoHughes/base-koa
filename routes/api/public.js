@@ -8,11 +8,12 @@ const controller = require('../../controller/index')
 //middleware
 const validate = require('../middleware/validate')
 
+//validate
+const validateSchema = require('../../validateSchema/validate')
+
 
 router
-//验证码图片地址
-  .get('/codeImg', controller.util.createImgCode())
-  //测试接口数据校验中间件
-  .post('/login', validate(controller.validate.loginSchema()), controller.user.login())
+//测试接口数据校验中间件
+  .post('/login', validate(validateSchema.userSchema.loginSchema()), controller.user.login())
 
 module.exports = router

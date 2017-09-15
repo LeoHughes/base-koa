@@ -1,4 +1,4 @@
-const util = require('./util')
+const util = require('../util/util')
 
 /**
  * 
@@ -10,6 +10,18 @@ class page extends util {
 
   constructor() {
     super()
+  }
+
+  /**
+   * 验证码图片地址
+   * 
+   * @returns 
+   * @memberof page
+   */
+  codeImg() {
+
+    return this.createImgCode()
+
   }
 
   /**

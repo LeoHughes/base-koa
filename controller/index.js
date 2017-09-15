@@ -1,4 +1,7 @@
 const fs = require('fs')
+const Util = require('../util/util')
+const util = new Util()
+
 
 /** 
  * @class controller
@@ -9,23 +12,12 @@ class controller {
 
   constructor() {
 
-    let arr = fs.readdirSync(__dirname, 'utf-8')
+    const mountClass = util.mountClass()
 
-    arr.forEach((el) => {
-
-      if (el !== 'index.js') {
-
-        let objName = el.replace('.js', '')
-
-        let obj = require(`./${objName}`)
-
-        this[objName] = new obj()
-
-      }
-
-    })
+    mountClass(this, __dirname)
 
   }
+
 
 }
 
