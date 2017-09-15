@@ -1,3 +1,5 @@
+const fs = require('fs')
+const path = require('path')
 const captchapng = require('captchapng')
 const jwt = require('jwt-simple')
 
@@ -209,6 +211,38 @@ class util {
   tokenDecode(token, key) {
 
     return jwt.decode(token, key)
+
+  }
+
+  /**
+   * 遍历目录下的class并挂载到传入对象上
+   * 
+   * @param {any}    object     需要挂载的对象
+   * @param {string} modulePath 需要遍历的路径
+   * @param {string} output     需要输出的主对象名称
+   * @memberof util
+   */
+  mountClass() {
+
+    return (object, modulePath, output = 'index', ) => {
+
+      let arr = fs.readdirSync(modulePath, 'utf-8')
+
+      arr.forEach((el) => {
+
+        let objName = el.replace('.js', '')
+
+        if (objName !== output) {
+
+          let obj = require(path.join(modulePath, objName))
+
+          object[objName] = new obj()
+
+        }
+
+      })
+
+    }
 
   }
 
