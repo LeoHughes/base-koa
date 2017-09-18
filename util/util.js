@@ -226,21 +226,29 @@ class util {
 
     return (object, modulePath, output = 'index', ) => {
 
-      let arr = fs.readdirSync(modulePath, 'utf-8')
+      try {
 
-      arr.forEach((el) => {
+        let arr = fs.readdirSync(modulePath, 'utf-8')
 
-        let objName = el.replace('.js', '')
+        arr.forEach((el) => {
 
-        if (objName !== output) {
+          let objName = el.replace('.js', '')
 
-          let obj = require(path.join(modulePath, objName))
+          if (objName !== output) {
 
-          object[objName] = new obj()
+            let obj = require(path.join(modulePath, objName))
 
-        }
+            object[objName] = new obj()
 
-      })
+          }
+
+        })
+
+      } catch (error) {
+
+        throw (error)
+
+      }
 
     }
 

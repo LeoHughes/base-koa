@@ -32,4 +32,4 @@ exports.redisOption = {
 
 
 //MongoDB配置 mongodb://username:password@host:port/database
-exports.dbURL = "mongodb://192.168.8.103:27017/beBetter"
+exports.dbURL = "mongodb://192.168.1.90:27017/beBetter"
