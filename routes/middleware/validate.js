@@ -4,11 +4,11 @@
 
 const joi = require('joi')
 
-module.exports = (schema) => {
+module.exports = schema => {
 
   return async(ctx, next) => {
 
-    const input = ctx.request.body
+    const input = ctx.method === 'POST' ? ctx.body : ctx.query
 
     const { error, value } = await joi.validate(input, schema)
 
