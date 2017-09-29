@@ -2,11 +2,11 @@
  * 检测是否授权访问私有接口
  */
 
-module.exports = () => {
+module.exports = (checkName = 'user') => {
 
   return (ctx, next) => {
 
-    if (!ctx.session.user) {
+    if (!ctx.session[checkName]) {
 
       ctx.status = 403
 
