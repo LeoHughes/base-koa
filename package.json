@@ -12,7 +12,8 @@
     "start": "node bin/www",
     "dev": "./node_modules/.bin/nodemon bin/www",
     "prd": "pm2 start bin/www",
-    "test": ""
+    "stop": "pm2 stop ./pm2.config.json",
+    "clear": "pm2 flush"
   },
   "dependencies": {
     "captchapng": "0.0.1",
