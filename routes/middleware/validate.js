@@ -6,11 +6,11 @@ const joi = require('joi')
 
 module.exports = schema => {
 
-  return async(ctx, next) => {
+  return (ctx, next) => {
 
     const input = ctx.method === 'POST' ? ctx.body : ctx.query
 
-    const { error, value } = await joi.validate(input, schema)
+    const { error } = joi.validate(input, schema)
 
     if (error) {
 
