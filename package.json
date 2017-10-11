@@ -31,6 +31,7 @@
     "koa-session": "^5.5.0",
     "koa-static": "^4.0.1",
     "koa-views": "^6.0.2",
+    "lodash": "^4.17.4",
     "pug": "^2.0.0-rc.1",
     "redis": "^2.8.0"
   },
