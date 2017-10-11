@@ -8,7 +8,7 @@ module.exports = schema => {
 
   return (ctx, next) => {
 
-    const input = ctx.method === 'POST' ? ctx.body : ctx.query
+    const input = ctx.method === 'POST' ? ctx.request.body : ctx.request.query
 
     const { error } = joi.validate(input, schema)
 
