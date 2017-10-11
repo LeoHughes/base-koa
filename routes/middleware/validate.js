@@ -2,15 +2,13 @@
  * 接口校验中间件
  */
 
-const joi = require('joi')
-
-module.exports = schema => {
+module.exports = validateSchema => {
 
   return (ctx, next) => {
 
     const input = ctx.method === 'POST' ? ctx.request.body : ctx.request.query
 
-    const { error } = joi.validate(input, schema)
+    const { error } = validateSchema.validate(input)
 
     if (error) {
 

@@ -15,7 +15,7 @@ class user extends util {
 
     return ctx => {
 
-      ctx.body = ctx.method === 'POST' ? ctx.body : ctx.query
+      ctx.body = ctx.method === 'POST' ? ctx.request.body : ctx.request.query
 
     }
 
