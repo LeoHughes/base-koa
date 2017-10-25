@@ -29,7 +29,3 @@ exports.redisOption = {
   db: 1, //使用的数据库索引，默认 0
   prefix: `${proName}:` //key前缀，默认 sess：
 }
-
-
-//MongoDB配置 mongodb://username:password@host:port/database
-exports.dbURL = "mongodb://192.168.1.90:27017/beBetter"
