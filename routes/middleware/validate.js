@@ -12,7 +12,10 @@ module.exports = validateSchema => {
 
     if (error) {
 
-      ctx.body = error
+      ctx.body = {
+        isError: true,
+        errors: error.details
+      }
 
     } else {
 

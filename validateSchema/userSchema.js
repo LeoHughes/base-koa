@@ -16,8 +16,8 @@ class userChema {
     return joi.object({
       userName: joi.string().min(6).max(15).required(),
       passWord: joi.string().min(6).max(15).required(),
-      email: joi.string().regex(regex.email).required(),
-      name: joi.string().regex(regex.CN)
+      email: joi.string().regex(regex.email, 'email').required(),
+      name: joi.string().regex(regex.CN, 'chinese')
     })
 
   }

@@ -17,7 +17,7 @@
   "dependencies": {
     "captchapng": "0.0.1",
     "debug": "^3.1.0",
-    "joi": "^11.3.4",
+    "joi": "^13.0.1",
     "jwt-simple": "^0.5.1",
     "koa": "^2.2.0",
     "koa-bodyparser": "^4.2.0",
