@@ -1,5 +1,5 @@
 {
-  "project": "Interface-proxy",
+  "project": "base-koa",
   "version": "1.0.0",
   "servers": [{
       "id": "localhost",
