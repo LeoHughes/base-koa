@@ -9,9 +9,8 @@
     "node": ">= 7.8.0"
   },
   "scripts": {
-    "start": "node bin/www",
     "dev": "./node_modules/.bin/nodemon bin/www",
-    "prd": "pm2 start bin/www",
+    "start": "pm2 start ./pm2.config.json",
     "stop": "pm2 stop ./pm2.config.json",
     "clear": "pm2 flush"
   },
