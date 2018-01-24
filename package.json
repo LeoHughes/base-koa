@@ -17,7 +17,7 @@
   "dependencies": {
     "captchapng": "0.0.1",
     "debug": "^3.1.0",
-    "joi": "^13.1.0",
+    "joi": "^13.1.1",
     "jwt-simple": "^0.5.1",
     "koa": "^2.4.1",
     "koa-bodyparser": "^4.2.0",
@@ -25,7 +25,7 @@
     "koa-json": "^2.0.2",
     "koa-logger": "^3.1.0",
     "koa-onerror": "^4.0.0",
-    "koa-redis": "^3.1.1",
+    "koa-redis": "^3.1.2",
     "koa-router": "^7.3.0",
     "koa-session": "^5.8.1",
     "koa-static": "^4.0.2",
