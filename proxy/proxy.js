@@ -3,7 +3,7 @@
  */
 
 const path = require('path')
-const ProxyModel = require('./ProxyModel')
+const ProxyModel = require('interfaceproxy')
 
 let proxy = new ProxyModel(path.resolve(__dirname, '../interface.json'))
 
